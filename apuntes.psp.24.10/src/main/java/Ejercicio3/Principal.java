@@ -6,6 +6,9 @@ import java.io.InputStream;
 
 public class Principal {
 	public static void main(String[] args) throws IOException {
+		
+		//Abre lo que hay en la carpeta del ejercicio1. que en este caso abre el bloc de notas.
+		
 		File ruta=new File(".\\target\\classes");
 		ProcessBuilder pb=new ProcessBuilder("java","ejercicio1.Principal");
 		pb.directory(ruta);
