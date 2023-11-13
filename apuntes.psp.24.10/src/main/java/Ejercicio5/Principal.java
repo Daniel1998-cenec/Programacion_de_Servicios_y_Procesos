@@ -1,19 +1,28 @@
 package Ejercicio5;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-		ProcessBuilder pb=new ProcessBuilder ("CMD","/C","tasklist");
-		File fOut=new File("Salida.txt");
-		File fErr=new File("Error.txt");
+		//ProcessBuilder pb = new ProcessBuilder("cmd","/c","puñetaa");
+		ProcessBuilder pb = new ProcessBuilder("cmd","/c","tasklist");
 		
-		pb.redirectOutput(fOut);
-		pb.redirectError(fErr);
-		pb.start();
-
+		Process p = pb.start();
+		InputStream is=p.getInputStream();
+		int c;
+		while ((c=is.read()) != -1) {
+			System.out.print((char)c);
+		}
+		is.close();
+		
+		InputStream isError=p.getErrorStream();
+		int cError;
+		while((cError=isError.read())!=-1) {
+			System.out.print((char)cError);
+		}
+		isError.close();
 	}
 
 }

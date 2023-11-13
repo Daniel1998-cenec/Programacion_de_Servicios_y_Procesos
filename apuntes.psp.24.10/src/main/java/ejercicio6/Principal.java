@@ -1,4 +1,4 @@
-package ultimoApunte;
+package ejercicio6;
 
 import java.io.IOException;
 import java.io.InputStream;

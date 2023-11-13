@@ -1,4 +1,4 @@
-package OtrosNuevoPaquete;
+package ejercicio4;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,7 +6,8 @@ import java.io.InputStream;
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-		ProcessBuilder pb = new ProcessBuilder("cmd","/c","puñetaa");
+
+		ProcessBuilder pb = new ProcessBuilder("cmd","/c","ipconfig");
 		//ProcessBuilder pb = new ProcessBuilder("cmd","/c","tasklist");
 		
 		Process p = pb.start();
@@ -16,13 +17,6 @@ public class Principal {
 			System.out.print((char)c);
 		}
 		is.close();
-		
-		InputStream isError=p.getErrorStream();
-		int cError;
-		while((cError=isError.read())!=-1) {
-			System.out.print((char)cError);
-		}
-		isError.close();
 	}
 
 }
