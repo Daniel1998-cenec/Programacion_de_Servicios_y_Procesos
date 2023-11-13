@@ -6,8 +6,9 @@ import java.io.InputStream;
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-		//ProcessBuilder pb = new ProcessBuilder("cmd","/c","puñetaa");
-		ProcessBuilder pb = new ProcessBuilder("cmd","/c","tasklist");
+		//teste con la palabra puñeta
+		ProcessBuilder pb = new ProcessBuilder("cmd","/c","puñetaa");
+		//ProcessBuilder pb = new ProcessBuilder("cmd","/c","tasklist");
 		
 		Process p = pb.start();
 		InputStream is=p.getInputStream();

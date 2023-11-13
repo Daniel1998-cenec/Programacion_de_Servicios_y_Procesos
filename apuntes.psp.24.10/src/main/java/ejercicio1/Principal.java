@@ -8,8 +8,8 @@ public class Principal {
 		
 		//Abre el bloc de notas
 		
-		ProcessBuilder pb=new ProcessBuilder("NotePad");
-		//ProcessBuilder pb=new ProcessBuilder("calc");
+		//ProcessBuilder pb=new ProcessBuilder("NotePad");
+		ProcessBuilder pb=new ProcessBuilder("calc");
 		
 		Process p=pb.start();
 		
