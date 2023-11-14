@@ -9,7 +9,7 @@ public class Principal {
 		
 		//Crea una bloc de nota del cdm del taklist
 		
-		ProcessBuilder pb=new ProcessBuilder ("CMD","/C","tasklist");
+		ProcessBuilder pb=new ProcessBuilder ("CMD","/C","ipconfig");
 		
 		//(ProcessBuilder pb=new ProcessBuilder ("CMD","/C","tasklist");
 		//Hace lo mismo pero esta vez crea una nota del ipconfig
