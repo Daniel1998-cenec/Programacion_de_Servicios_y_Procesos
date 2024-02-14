@@ -1,0 +1,3 @@
+SHA-1 como MD5 se consideran inseguros en la actualidad debido a vulnerabilidades encontradas en su diseño,
+especialmente colisiones. Por lo tanto, no se recomienda su uso en nuevas aplicaciones. 
+En su lugar, se prefieren algoritmos más seguros como SHA-256, SHA-512.
