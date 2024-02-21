@@ -16,7 +16,7 @@ public class ObjetoServidor {
 
         try {
             servidor = new ServerSocket(puerto);
-            System.out.println("Esperando al cliente en el puerto: " + servidor.getLocalPort());
+            System.out.println("Esperando al entrenador en pokemon para entrar al combate: " + servidor.getLocalPort());
             Socket cliente = servidor.accept();
 
             ObjectOutputStream oos = new ObjectOutputStream(cliente.getOutputStream());
