@@ -14,25 +14,25 @@ public class Servidor {
             Socket cliente = servidor.accept();
             System.out.println("Cliente conectado desde: " + cliente.getInetAddress().getHostName());
 
-            // Contraseña almacenada en el servidor
+            
             String contraseñaAlmacenada = "cenec";
             
-            // Encriptar la contraseña almacenada con SHA-256 y convertirla a hexadecimal
+            
             String contraseñaEncriptada = Hexadecimal(encriptarSHA256(contraseñaAlmacenada));
 
-            // Flujo de salida para enviar datos al cliente
+          
             DataOutputStream salida = new DataOutputStream(cliente.getOutputStream());
 
-            // Flujo de entrada para recibir datos del cliente
+           
             DataInputStream entrada = new DataInputStream(cliente.getInputStream());
 
-            // Mensaje al cliente solicitando contraseña
+            
             salida.writeUTF("Ingrese la contraseña:");
 
-            // Recibir la contraseña del cliente
+            
             String contraseñaCliente = entrada.readUTF();
 
-            // Encriptar la contraseña recibida del cliente con SHA-256 y convertirla a hexadecimal
+           
             String contraseñaClienteEncriptada = Hexadecimal(encriptarSHA256(contraseñaCliente));
             
             System.out.println("Contraseña almacenada "+contraseñaEncriptada);
